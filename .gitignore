@@ -1,2 +1,4 @@
 /simple_backend/postService/node_modules
+/simple_backend/commentService/node_modules
+/simple_backend/event-bus/node_modules
 /simple_front_end/node_modules
