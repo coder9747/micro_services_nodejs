@@ -1,4 +1,6 @@
-/simple_backend/postService/node_modules
-/simple_backend/commentService/node_modules
-/simple_backend/event-bus/node_modules
-/simple_front_end/node_modules
+/backend/PostService/node_modules
+/backend/CommentService/package-lock.json
+/backend/EventBus/node_modules
+/backend/EventBus/package-lock.json
+/backend/CommentService/node_modules
+/backend/CommentService/package-lock.json
