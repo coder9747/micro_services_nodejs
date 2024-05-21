@@ -31,6 +31,7 @@ app.post("/create-post", async(req, res) => {
 });
 app.post('/create-comment',async(req,res)=>
 {
+    console.log('event recived');
     try {
         const {content,id} = req.body;
         await axios.post("http://localhost:3000/event",{id,content,type:"CommentCreated"});
@@ -44,5 +45,6 @@ app.post('/create-comment',async(req,res)=>
 
 
 app.listen(4000, () => {
+    console.log('changed made again');
     console.log('Post Service Running At Port 4000');
 })
