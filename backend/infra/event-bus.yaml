@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-bus-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: event-bus
+  template:
+    metadata:
+      labels:
+        app: event-bus
+    spec:
+      containers:
+        - name: event-bus
+          image: coder/event-bus:latest
+          imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: eventclusterpsrv
+spec:
+  selector:
+    app: event-bus
+  ports:
+    - name: post
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
